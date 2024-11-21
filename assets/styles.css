@@ -1,0 +1,270 @@
+:root {
+    --color1: #000000;
+    --color2: #c044ab;
+    --color3: #ffbbf4;
+    --color4: #ffc2fb;
+    --color5: #feffff;
+}
+
+.scroll-element {
+    scroll-margin: 30px 0 0 30px;
+}
+
+@media only screen and (max-width: 800px) {
+    .scroll-element {
+        scroll-margin: 10px 0 0 10px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--color3);
+    padding-bottom: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Pour Chrome, Safari, et Opera */
+}
+
+.content {
+    margin-left: 340px;
+    padding: 100px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    margin: 30px 0;
+    display: block;
+    max-height: 100%;
+}
+
+.console_img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+#typed_text {
+    position: absolute;
+    top: 45%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    font-family: "Ubuntu Mono", monospace;
+    color: var(--color5);
+    font-size: 4vw; 
+    line-height: 1.4;
+    text-align: left; 
+    max-width: 90%; 
+    white-space: pre-line; /* Permet de garder les sauts de ligne dans le texte */
+    word-wrap: break-word; /* S'assure que le texte se coupe correctement */
+}
+
+/* Ajustements pour les grandes résolutions d'écran */
+@media only screen and (min-width: 768px) {
+    #typed_text {
+        font-size: 1.7vw; /* Taille du texte plus petite sur les écrans larges */
+        max-width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #typed_text {
+        font-size: 1.5vw; /* Taille du texte plus petite sur les écrans larges */
+        max-width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #typed_text {
+        font-size: 1.2vw; /* Taille du texte encore plus petite sur les très grands écrans */
+        max-width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    #typed_text {
+        font-size: 1vw; /* Taille du texte pour très grands écrans */
+        max-width: 40%;
+    }
+}
+
+.sidenav {
+    height: 100%;
+    width: 300px;
+    padding: 20px;
+    background-color: var(--color1);
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    color: var(--color5);
+    text-align: center;
+    box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.25);
+}
+
+.sidenavcontent {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+}
+
+.profile-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 7px solid var(--color2);
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+.sidebarname {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25pt;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.sidebarcitation {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 12pt;
+    margin: 0pt;
+}
+
+.sidebarauthor {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 8pt;
+    text-align-last: right;
+    margin-top: 3pt;
+    margin-right: 10pt;
+    margin-left: 10pt;
+    margin-bottom: 0pt;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#linkedin {
+    width: 35px;
+    height: 35px;
+}
+
+#github {
+    width: 35px;
+    height: 35px;
+}
+
+#facebook {
+    width: 35px;
+    height: 35px;
+}
+
+#insta {
+    width: 35px;
+    height: 35px;
+}
+
+hr {
+    height: 1px;
+    background-color: var(--color5);
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.nav_buttons {
+    margin: 20px 0px;
+    width: inherit;
+}
+
+.nav_buttons button {
+    width: inherit;
+    height: 35px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    color: var(--color4);
+    background-color: var(--color1);
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: background-color 0.25s ease;
+}
+
+.nav_buttons a {
+    width: inherit;
+    height: 35px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    color: var(--color4);
+    background-color: var(--color1);
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: background-color 0.25s ease;
+}
+
+
+.nav_buttons button:hover {
+    background-color: var(--color2);
+}
+
+.nav_bottom_buttons {
+    padding: 10px;
+}
+
+.nav_bottom_buttons button {
+    display: inline;
+    text-align: center;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    height: 30px;
+    width: 80%;
+    min-width: 100px;
+    border-radius: 5px;
+    background: var(--color2);
+    border: none;
+    color: var(--color4);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.nav_bottom_buttons button:hover {
+    color: var(--color2);
+    background: var(--color4);
+}
+
+*::after {
+    box-sizing: border-box;
+}
