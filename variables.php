@@ -1,6 +1,13 @@
 <?php
 
-$site_webStatement = $mysqlClient->prepare('SELECT * FROM site_web');
-$site_webStatement->execute();
-$site_web = $site_webStatement->fetchAll();
+$EntreprisesStatement = $mysqlClient->prepare('SELECT * FROM Entreprises');
+$EntreprisesStatement->execute();
+$Entreprises = $EntreprisesStatement->fetchAll();
 
+$SkillsStatement = $mysqlClient->prepare('SELECT * FROM Skills');
+$SkillsStatement->execute();
+$Skills = $SkillsStatement->fetchAll();
+
+$infoStatement = $mysqlClient->prepare('SELECT * FROM info');
+$infoStatement->execute();
+$info = $infoStatement->fetchAll();
