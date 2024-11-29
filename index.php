@@ -116,8 +116,6 @@ require_once(__DIR__ . '/variables.php');
                     <?php endforeach; ?>
                 </ul>
             </div>
-            <?php
-        }
         ?>
         </section>
         <section id="work_experience" class="aftertw scroll-element"
