@@ -106,9 +106,9 @@ require_once(__DIR__ . '/variables.php');
                 MY SKILLS
             </h1>
             ?>
-            <div id="<?php echo strtolower(str_replace(' ', '_', $skillName)); ?>" class="card"> 
-                <h3 class="card_title"><?php echo $skillName; ?></h3>
-                <img id="<?php echo strtolower(str_replace(' ', '_', $skillName)) . '_logo'; ?>" alt="<?php echo $skillName; ?>"
+            <div id="<?php echo strtolower(str_replace(' ', '_', $Skills['Skills'])); ?>" class="card"> 
+                <h3 class="card_title"><?php echo $Skills['Skills']; ?></h3>
+                <img id="<?php echo strtolower(str_replace(' ', '_', $Skills['Skills'])) . '_logo'; ?>" alt="<?php echo $skillName; ?>"
                     src="<?php echo $imageSrc; ?>" class="card_logo" loading="lazy">
                 <ul class="card_list">
                     <?php foreach ($technologies as $technology): ?>

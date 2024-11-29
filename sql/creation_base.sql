@@ -15,16 +15,16 @@ VALUES
 CREATE TABLE Skills(
     ID int AUTO_INCREMENT PRIMARY KEY,
     Skills varchar(255),
-    IMG_src varchar(255)
+    IMG_src varchar(500)
 );
 
-INSERT INTO Skills (Skills) 
+INSERT INTO Skills (ID,Skills,IMG_src) 
 VALUES 
-    ('Full Stack Development','https://www.fullstack.co.za/img/fullstack-logo.png'),
-    ('Machine Learning','https://upload.wikimedia.org/wikipedia/commons/d/d5/Hey_Machine_Learning_Logo.png'),
-    ('Cloud Computing','https://img.favpng.com/8/14/19/cloud-computing-computer-icons-cloud-storage-png-favpng-L6Msg7y7MaH4gzB6Y7FXtq71t.jpg'),
-    ('C/C++ Developer','https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png'),
-    ('API Design et Développement','https://media.licdn.com/dms/image/C5112AQF49DOfOhCFSA/article-cover_image-shrink_720_1280/0/1579816811751?e=2147483647&v=beta&t=e47GGJDzoqsm4dl3qV2EjVWrxyMzIwsPmEE9Gywo83w');
+    (1,'Full Stack Development','https://www.fullstack.co.za/img/fullstack-logo.png'),
+    (2,'Machine Learning','https://upload.wikimedia.org/wikipedia/commons/d/d5/Hey_Machine_Learning_Logo.png'),
+    (3,'Cloud Computing','https://img.favpng.com/8/14/19/cloud-computing-computer-icons-cloud-storage-png-favpng-L6Msg7y7MaH4gzB6Y7FXtq71t.jpg'),
+    (4,'C/C++ Developer','https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png'),
+    (5,'API Design et Développement','https://media.licdn.com/dms/image/C5112AQF49DOfOhCFSA/article-cover_image-shrink_720_1280/0/1579816811751?e=2147483647&v=beta&t=e47GGJDzoqsm4dl3qV2EjVWrxyMzIwsPmEE9Gywo83w');
 
 CREATE TABLE Technologies (
     ID int AUTO_INCREMENT PRIMARY KEY,
