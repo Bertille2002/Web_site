@@ -69,8 +69,7 @@ require_once(__DIR__ . '/variables.php');
             <div class="nav_bottom_buttons">
                 <p id="moreinfo">FOR MORE INFORMATION</p>
                 <div class="column_btn">
-                    <button onclick="location.href='mailto:natashagarcia@mit.edu.com'"
-                        id="btn_contactme">E-MAIL</button>
+                    <button onclick="location.href='mailto:natashagarcia@mit.edu.com'" id="btn_contactme">E-MAIL</button>
                 </div>
                 <div class="column_btn">
                     <button
@@ -78,6 +77,12 @@ require_once(__DIR__ . '/variables.php');
                         id="btn_contactme">MY CV</button>
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <a href='comptes_site/login.php' target="_blank">
+                <button class="login">Login</button>
+            </a>
         </div>
     </nav>
     <div id="mycontent" class="content">
@@ -105,18 +110,65 @@ require_once(__DIR__ . '/variables.php');
             <h1 class="titlehead">
                 MY SKILLS
             </h1>
-            ?>
-            <div id="<?php echo strtolower(str_replace(' ', '_', $Skills['Skills'])); ?>" class="card"> 
-                <h3 class="card_title"><?php echo $Skills['Skills']; ?></h3>
-                <img id="<?php echo strtolower(str_replace(' ', '_', $Skills['Skills'])) . '_logo'; ?>" alt="<?php echo $skillName; ?>"
-                    src="<?php echo $imageSrc; ?>" class="card_logo" loading="lazy">
-                <ul class="card_list">
-                    <?php foreach ($technologies as $technology): ?>
-                        <li><?php echo $technology; ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-        ?>
+            <div id="skills_grid_view" class="skill-cards">
+                <div id="full_stack_development" class="card">
+                    <h3 class="card_title">Full Stack Developer</h3>
+                    <img id="full_stack_logo" alt="Full Stack Platform"
+                        src="https://www.fullstack.co.za/img/fullstack-logo.png" class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>HTML, CSS, Java Script</li>
+                        <li>Frameworks et bibliothèques JavaScript</li>
+                        <li>Languages de codes Backend</li>
+                        <li>Bases de données (SQL et NoSQL)</li>
+                    </ul>
+                </div>
+                <div id="Machine_Learning" class="card">
+                    <h3 class="card_title">Machine Learning</h3>
+                    <img id="LLM_logo" alt="LLM"
+                        src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Hey_Machine_Learning_Logo.png"
+                        class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>Programmation Python</li>
+                        <li>Conception et entraînement de modèles</li>
+                        <li>Maths et Stats appliquées</li>
+                    </ul>
+                </div>
+                <div id="Cloud_Computing" class="card">
+                    <h3 class="card_title">Cloud Computing</h3>
+                    <img id="Cloud_logo" alt=""
+                        src="https://img.favpng.com/8/14/19/cloud-computing-computer-icons-cloud-storage-png-favpng-L6Msg7y7MaH4gzB6Y7FXtq71t.jpg"
+                        class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>Maîtrise des plateformes cloud (Amazon Web Services, Microsoft Azure, Google Cloud
+                            Plateform)</li>
+                        <li>Virtualisation et conteneurisation</li>
+                        <li>Conception d'architecture cloud</li>
+                        <li>Sécurisation de cloud</li>
+                    </ul>
+                </div>
+                <div id="c_cpp_development" class="card">
+                    <h3 class="card_title"> C/C++ Developer</h3>
+                    <img id="c_cpp_logo" alt="C/C++"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png"
+                        class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>Low-level development bibliothèques</li>
+                        <li>Systèmes inteégré</li>
+                        <li>Prototypes Arduino et Raspberry Pi</li>
+                    </ul>
+                </div>
+                <div id="API_design_development" class="card">
+                    <h3 class="card_title">API Design et Developpement</h3>
+                    <img id="API_logo" alt="API"
+                        src="https://media.licdn.com/dms/image/C5112AQF49DOfOhCFSA/article-cover_image-shrink_720_1280/0/1579816811751?e=2147483647&v=beta&t=e47GGJDzoqsm4dl3qV2EjVWrxyMzIwsPmEE9Gywo83w"
+                        class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>Maîtrise des protocoles et standards API</li>
+                        <li>Conception et documentation API</li>
+                        <li>Sécurisation des API</li>
+                        <li>Windows API</li>
+                    </ul>
+                </div>
         </section>
         <section id="work_experience" class="aftertw scroll-element"
             style="visibility: visible; animation: 2s ease 0s 1 normal none running fadein;">
