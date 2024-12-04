@@ -31,7 +31,7 @@
         <br>
         <button type="submit" value="Sign_up" name="ok">Register</button>
         <br>
-        <p>Already a member ?<a href="login.php">Login here</a></p>
+        <p>Already a member ?<a href="login_index.php">Login here</a></p>
     </form>
 </body>
 </html>

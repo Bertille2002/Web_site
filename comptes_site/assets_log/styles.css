@@ -1,0 +1,50 @@
+:root {
+    --color1: #000000;
+    --color2: #7a1d6b;
+    --color3: #fff2fd;
+    --color4: #d47bc1;
+    --color5: #feffff;
+}
+
+.head {
+    font-size: medium;
+    text-align: center;
+}
+
+.title {
+    font: Georgia;
+    font-size: large;
+}
+
+.login_form {
+    width: 7cm;
+    height: 6cm;
+    background-color: rgb(235, 235, 235);
+    border-radius: 9px;
+    border-color: rgb(58, 58, 58);
+    border-width: 3px;
+    position: relative;
+    margin: auto;
+}
+
+.input {
+    width: 6cm;
+    height: 0.8cm;
+    border-radius: 9px;
+    border-width: 0.0001cm;
+}
+
+.bttn {
+    color: var(--color5);
+    background-color: var(--color4);
+    border-color: white;
+    border-radius: 9px;
+    border-width: 0.001cm;
+    width: 6.2cm;
+    height: 0.9cm;
+    font: Georgia;
+}
+
+.header_2 {
+    text-align: center;
+}

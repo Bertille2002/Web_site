@@ -17,3 +17,14 @@ $password = ""
     else{
         echo "Account successfully created !";
     } -->
+<!-- 
+    // $rep = $req->fetch();
+            // if($rep && $rep['ID'] != false){
+            //     // session_start();
+            //     header("Location: ../index.php");
+            //     exit();
+            // }
+            // else{
+            //     echo $error_msg;
+            // } -->
+

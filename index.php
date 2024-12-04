@@ -2,6 +2,9 @@
 require_once(__DIR__ . '/config/mysql.php');
 require_once(__DIR__ . '/databaseconnect.php');
 require_once(__DIR__ . '/variables.php');
+
+session_start(); 
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -78,9 +81,7 @@ require_once(__DIR__ . '/variables.php');
                 </div>
             </div>
             <br>
-            <br>
-            <br>
-            <a href='comptes_site/login.php' target="_blank">
+            <a href='comptes_site/login_index.php' target="_blank">
                 <button class="login">Login</button>
             </a>
         </div>

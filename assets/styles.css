@@ -267,6 +267,28 @@ hr {
     background: var(--color4);
 }
 
+.login {
+  width: inherit;
+  height: 35px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  color: var(--color4);
+  background-color: var(--color1);
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: background-color 0.25s ease;
+}
+
+.login button:hover {
+  color: var(--color2);
+  background: var(--color4);
+}
+
 *::after {
     box-sizing: border-box;
 }
