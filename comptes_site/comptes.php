@@ -22,13 +22,14 @@ if(isset($_POST['ok'])){
     $password = $_POST['password'];
     $password_ver = $_POST['password_ver']; 
     if($username != "" && $password != "" && $first_name != "" && $last_name != "" && $password == $password_ver){
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $requete = $site_web->prepare("INSERT INTO Users (first_name, last_name, username, password) VALUES (:first_name, :last_name, :username, :password)");
         $requete->execute(
             array(
                 "first_name" => $first_name,
                 "last_name" => $last_name,
                 "username" => $username,
-                "password" => $password
+                "password" => $hashed_password
             )
         );
         $success = "Successful registration !";
