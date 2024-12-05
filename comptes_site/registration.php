@@ -42,7 +42,7 @@
             </form>
         </div>
         <div class="header_login">
-            <p>Already a member ?  <a href="login_index.php">Login here</a></p>
+            <p>Already a member ?  <a href="../index.php">Login here</a></p>
         </div>
     </div>
 </body>

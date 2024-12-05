@@ -1,12 +1,14 @@
 <?php
+$host = 'localhost';
+$dbname = 'users';
+$username = "root";
+$password = "root";
 
-try {
-    $mysqlClient = new PDO(
-        sprintf('mysql:host=%s;dbname=%s;port=%s;charset=utf8', MYSQL_HOST, MYSQL_NAME, MYSQL_PORT),
-        MYSQL_USER,
-        MYSQL_PASSWORD
-    );
-    $mysqlClient->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (Exception $exception) {
-    die('Erreur : ' . $exception->getMessage());
+try{
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "Error : ".$e->getMessage();
 }
+
+?>

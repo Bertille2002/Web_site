@@ -4,9 +4,6 @@ $servername = "localhost";
 $database = "users";
 $util = "root";
 $pssw = "root";
-// $error_msg2 = "The username you have chosen already exists.";
-// $error_msg3 = "The password you have chosen already exists.";
-// $error_msg4 = "Password confirmation failed.";
 $error_msg = null;
 $success = null;
 
@@ -62,7 +59,7 @@ if(isset($_POST['ok'])){
     <br>
 
     <div class="home">
-        <a href="../index.php">
+        <a href="../cyberportfolio.php">
             <button class="button_home" type="submit">BACK TO HOME PAGE</button>
         </a>
     </div>
