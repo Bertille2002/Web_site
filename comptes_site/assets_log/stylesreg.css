@@ -16,13 +16,13 @@
     font-size: large;
 }
 
-.login_form {
+.reg_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 7cm;
-    height: 6cm;
+    width: 8cm;
+    height: 11cm;
     background-color: rgb(235, 235, 235);
     border-radius: 9px;
     border-color: rgb(58, 58, 58);
@@ -34,15 +34,16 @@
 input {
     width: 6cm;
     height: 0.8cm;
-    border-radius: 9px;
+    border-radius: 8px;
     border-width: 0.0001cm;
 }
 
 input::placeholder {
+    font-size: medium;
     color: rgba(109, 108, 108, 0.774);
 }
 
-.bttn {
+.button {
     color: var(--color5);
     background-color: var(--color4);
     border-color: white;
@@ -54,13 +55,18 @@ input::placeholder {
     font-weight: bold;
 }
 
-.header_2 {
-    text-align: center;
+.button_home {
+    
 }
 
-.error-message {
-    color: red;
-    background-color: #ffe6e6;
-    border: 1px solid red;
+.header_login {
+    text-align: center;
+    font-size: 18px;
+}
+
+.success {
+    color: rgb(9, 255, 0);
+    background-color: #e6ffe8;
+    border: 1px solid rgb(9, 255, 0);
     padding: 10px;
 }

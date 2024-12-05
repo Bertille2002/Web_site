@@ -84,6 +84,10 @@ session_start();
             <a href='comptes_site/login_index.php' target="_blank">
                 <button class="login">Login</button>
             </a>
+            <br>
+            <a href='comptes_site/breach.php' target="_blank">
+                <button class="breach">Show most recent breach</button>
+            </a>
         </div>
     </nav>
     <div id="mycontent" class="content">

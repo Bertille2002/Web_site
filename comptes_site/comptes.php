@@ -4,9 +4,11 @@ $servername = "localhost";
 $database = "users";
 $util = "root";
 $pssw = "root";
-$error_msg2 = "The username you have chosen already exists.";
-$error_msg3 = "The password you have chosen already exists.";
-$error_msg4 = "Password confirmation failed.";
+// $error_msg2 = "The username you have chosen already exists.";
+// $error_msg3 = "The password you have chosen already exists.";
+// $error_msg4 = "Password confirmation failed.";
+$error_msg = null;
+$success = null;
 
 try{
     $site_web = new PDO("mysql:host=$servername;dbname=$database;charset=utf8", $util, $pssw);
@@ -32,11 +34,34 @@ if(isset($_POST['ok'])){
                 "password" => $password
             )
         );
-        echo "Successful registration !";
+        $success = "Successful registration !";
     } if($password != $password_ver) {
-        echo "Password confirmation failed";
+        $error_msg = "Password confirmation failed.";
     } else {
-        echo "Form fields are incomplete";
+        $error_msg = "The username you have chosen already exists.";
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type='text/css' media='screen' href='assets_log/stylesreg.css'>
+    <title>Sign Up</title>
+</head>
+<body style="overflow: visible;">
+
+    <?php if (!empty($success)): ?>
+            <div class="success">
+                <?= htmlspecialchars($success) ?>
+            </div>
+    <?php endif; ?>
+
+    <div class="home">
+        <a href="../index.php"><button class="button_home" type="submit">HOME</button></a>
+    </div>
+
+</body>
+</html>

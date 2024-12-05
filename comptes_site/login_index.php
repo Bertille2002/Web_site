@@ -8,6 +8,7 @@ $host = 'localhost';
 $dbname = 'users';
 $username = "root";
 $password = "root";
+$errorMsg = null;
 
 try{
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
@@ -31,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../index.php?id=" . $user['ID']);
         exit();
     } else {
-        echo "Nom d'utilisateur ou mot de passe incorrect.";
+        $errorMsg = "Incorrect username or password.";
     }
 }
 ?>
@@ -48,33 +49,41 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body style="overflow: visible;">
     <div class="container">
+
+        <?php if (!empty($errorMsg)): ?>
+            <div class="error-message">
+                <?= htmlspecialchars($errorMsg) ?>
+            </div>
+        <?php endif; ?>
+
         <div class="head">
             <h1>Log in to your session</h1>
         </div>
         <div class="login_form">
             <form method="POST" action="login_index.php">
-                <label for="username" class="title">
+                <div class="form_group">
+                    <label for="username" class="title">
+                        <br>
+                        Username
+                        <br>
+                    </label>
+                    <input type="username" id="username" name="username" placeholder="Username" required></input>
                     <br>
-                    Username
-                    <br>
-                </label>
-                <input type="username" id="username" name="username" class="input" required></input>
+                </div>
+                <div class="form_group">
+                    <label for="password" class="title">
+                        <br>
+                        Password
+                        <br>
+                    </label>
+                    <input type="password" id="password" name="password" placeholder="Password" required></input>
+                </div>
                 <br>
-                <label for="password" class="title">
-                    <br>
-                    Password
-                    <br>
-                </label>
-                <input type="password" id="password" name="password" class="input" required></input>
+                <button class="bttn" type="submit">Connexion</button>
             </form>
-            <br>
-            <button class="bttn" type="submit">Connexion</button>
         </div>
         <div class="header_2">
             <p>New user ?  <a href="registration.php">Create an account here</a></p>
-            <a href="breach.php" target="_blank">
-                <button class="breach">Show most recent breach</button>
-            </a>
         </div>
     </div>
 </div>
