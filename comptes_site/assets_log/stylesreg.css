@@ -56,7 +56,15 @@ input::placeholder {
 }
 
 .button_home {
-    
+    color: var(--color1);
+    background-color: var(--color4);
+    border-color: white;
+    border-radius: 9px;
+    border-width: 0.001cm;
+    width: 6.2cm;
+    height: 0.9cm;
+    font-size: 16px;
+    font-weight: lighter;
 }
 
 .header_login {

@@ -59,8 +59,12 @@ if(isset($_POST['ok'])){
             </div>
     <?php endif; ?>
 
+    <br>
+
     <div class="home">
-        <a href="../index.php"><button class="button_home" type="submit">HOME</button></a>
+        <a href="../index.php">
+            <button class="button_home" type="submit">BACK TO HOME PAGE</button>
+        </a>
     </div>
 
 </body>
