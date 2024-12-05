@@ -82,15 +82,17 @@ session_start();
             </div>
             <br>
             <a href='comptes_site/login_index.php' target="_blank">
-                <button class="login">Login</button>
+                <button class="login">Logout</button>
             </a>
             <br>
-            <a href='comptes_site/breach.php' target="_blank">
-                <button class="breach">Show most recent breach</button>
-            </a>
         </div>
     </nav>
     <div id="mycontent" class="content">
+        <div id="security-info">
+            <strong>Last security breach detected : </strong>
+            <p id="security-details"></p>
+        </div>
+        <br>
         <section id="about_me" class="scroll-element">
             <div id="title"></div>
             <div id="container">
