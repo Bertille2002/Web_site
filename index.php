@@ -87,10 +87,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <br>
+
+    <div id="hash-detection">
+        <h2>Hash Detection</h2>
+        <form method="POST" action="hash_detection.php">
+            <label for="hash_input">Enter a hash :</label>
+            <input type="text" id="hash_input" placeholder="Eg: 5F64373772HBF8ZT3837hf7552982" required>
+            <button class="bttn" type="submit">Detect</button>
+        </form>
+
+        <?php if (isset($_GET['hash_result'])): ?>
+            <p><strong>Result : </strong> <?= htmlspecialchars($_GET['hash_result']) ?></p>
+        <?php elseif (isset($errorMsg)): ?>
+            <p class="error"><?= htmlspecialchars($errorMsg) ?></p>
+        <?php endif; ?>
+
+    </div>
+
+    <br>
+
     <div id="security-info">
         <strong>Last security breach detected : </strong>
         <p id="security-details"></p>
     </div>
+
 <script src='assets/source.js'></script>
 </body>
 </html>

@@ -64,8 +64,8 @@ CREATE TABLE info(
     Diploma varchar(255)
 );
 
--- INSERT INTO info (First_name, Last_name, Age, Diploma) 
--- VALUES ('Natasha', 'Garcia', 28, "Master expert en ingénierie et développement d'applications au MIT");
+INSERT INTO info (First_name, Last_name, Age, Diploma) 
+VALUES ('Natasha', 'Garcia', 28, "Master expert en ingénierie et développement d'applications au MIT");
 
 -- CREATE TABLE Users(
 --     ID int AUTO_INCREMENT PRIMARY KEY,
