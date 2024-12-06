@@ -18,4 +18,5 @@ VALUES
     (8,'H4ck3r','01010','4861636B657572','m0t2passDifichille'),
     (9,'Norman','Thavault','PEGI16','Mineur_mine-16'),
     (10,'Khla','roubz','khla_killer','ne3ne3'),
-    (11,'Flavien','leroux','Depressif78','ceci_est_un_appel_a_laide');
+    (11,'Flavien','leroux','Depressif78','ceci_est_un_appel_a_laide'),
+    (12,'Bertille','Buisson','test','test');
